@@ -20,7 +20,7 @@ public class BoardRestController {
     //게시글 전체 조회
     @GetMapping("/api/board")
     public List<Board> getBoard(){
-        return boardRepository.findAll();
+        return boardRepository.findAllByOrderByModifiedAtDesc();
     }
 
     //게시글 등록
