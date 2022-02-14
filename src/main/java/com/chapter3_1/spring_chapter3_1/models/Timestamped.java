@@ -1,4 +1,4 @@
-package models;
+package com.chapter3_1.spring_chapter3_1.models;
 
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
