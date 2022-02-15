@@ -2,6 +2,7 @@ package com.chapter3_1.spring_chapter3_1.controller;
 
 
 import com.chapter3_1.spring_chapter3_1.models.*;
+import com.chapter3_1.spring_chapter3_1.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,6 +12,7 @@ import java.util.List;
 @RestController
 public class CommentRestController {
     private final CommentRepository commentRepository;
+    private final CommentService commentService;
 
     //댓글 입력
     @PostMapping("/api/comment")
@@ -34,6 +36,11 @@ public class CommentRestController {
     }
 
     //댓글 수정
+    @PutMapping("/api/comment/{id}")
+    public Long updateComment(@PathVariable Long id, @RequestBody CommentreplaceDTO commentreplaceDTO){
+        commentService.update(id,commentreplaceDTO);
+        return id;
+    }
 
 //    public List<Comment> getComment(){
 //        return commentRepository.findAllByOrderByModifiedAtDesc();
