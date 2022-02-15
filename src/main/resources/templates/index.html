@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns xmlns:th="http://www.w3.org/1999/xhtml" : th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <!-- 합쳐지고 최소화된 최신 CSS -->
@@ -11,7 +11,7 @@
     <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/createboad.js"></script>
+    <!--    <script type="text/javascript" src="../static/js/createboad.js"></script>-->
 
 </head>
 <body>
@@ -25,6 +25,12 @@
     </tr>
     </thead>
     <tbody id = "check">
+    <tr th:each = "board : ${boards}">
+        <th scope="row">1</th>
+        <td th:text = "${board.title}"></td>
+        <td th:text = "${board.name}"></td>
+        <td th:text = "${board.modifiedAt}"></td>
+    </tr>
 
     </tbody>
 </table>

@@ -22,10 +22,11 @@ function showboard(){
 }
 
 function addshowboard(product){
-    return  `    <tr>
+    return  `
+        <tr th:each = "board : ${boards}">
         <th scope="row">1</th>
-        <td>${product.title}</td>
-        <td>${product.name}</td>
-        <td>${product.modifiedAt}</td>
+        <td th:text = "${board.title}"></td>
+        // <td th:text = "${board.name}>"</td>
+        // <td th:text = "${board.modifiedAt}"></td>
     </tr>`
 }
