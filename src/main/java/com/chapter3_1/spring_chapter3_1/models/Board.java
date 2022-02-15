@@ -23,12 +23,16 @@ public class Board extends Timestamped {
     @Column(nullable = false)
     private String content; //내용
 
-
     public Board(BoardRequestDTO requestDTO){
         this.title = requestDTO.getTitle();
         this.name = requestDTO.getName();
         this.content = requestDTO.getContent();
     }
 
+    public void update(BoardRequestDTO requestDTO){
+        this.title = requestDTO.getTitle();
+        this.name = requestDTO.getName();
+        this.content = requestDTO.getContent();
+    }
 
 }

@@ -27,7 +27,7 @@
     <tbody id = "check">
     <tr th:each = "board : ${boards}">
         <th scope="row">1</th>
-        <td th:text = "${board.title}"></td>
+        <td><a th:href="'/board?id='+${board.id}" th:text="${board.title}"></a></td>
         <td th:text = "${board.name}"></td>
         <td th:text = "${board.modifiedAt}"></td>
     </tr>
