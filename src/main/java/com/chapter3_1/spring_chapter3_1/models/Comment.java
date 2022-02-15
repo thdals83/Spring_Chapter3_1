@@ -30,5 +30,4 @@ public class Comment extends Timestamped {
         this.commentcontents = commentreplaceDTO.getComment_contents();
     }
 
-
 }
