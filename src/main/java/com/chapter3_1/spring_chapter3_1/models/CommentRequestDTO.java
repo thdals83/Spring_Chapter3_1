@@ -9,4 +9,5 @@ public class CommentRequestDTO {
     private String boardid; //제목
     private String comment_contents; //작성 내용
 
+
 }

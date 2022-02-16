@@ -21,5 +21,4 @@ public class CommentService {
         comment.update(commentreplaceDTO);
         return comment.getId();
     }
-
 }

@@ -1,7 +1,10 @@
 package com.chapter3_1.spring_chapter3_1.controller;
 
 
-import com.chapter3_1.spring_chapter3_1.models.*;
+import com.chapter3_1.spring_chapter3_1.models.Comment;
+import com.chapter3_1.spring_chapter3_1.models.CommentRepository;
+import com.chapter3_1.spring_chapter3_1.models.CommentRequestDTO;
+import com.chapter3_1.spring_chapter3_1.models.CommentreplaceDTO;
 import com.chapter3_1.spring_chapter3_1.service.CommentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -41,8 +44,4 @@ public class CommentRestController {
         commentService.update(id,commentreplaceDTO);
         return id;
     }
-
-//    public List<Comment> getComment(){
-//        return commentRepository.findAllByOrderByModifiedAtDesc();
-//    }
 }
