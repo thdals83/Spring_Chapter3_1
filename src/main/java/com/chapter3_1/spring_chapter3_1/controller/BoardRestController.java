@@ -1,6 +1,7 @@
 package com.chapter3_1.spring_chapter3_1.controller;
 
 
+
 import com.chapter3_1.spring_chapter3_1.models.Board;
 import com.chapter3_1.spring_chapter3_1.models.BoardRepository;
 import com.chapter3_1.spring_chapter3_1.models.BoardRequestDTO;
